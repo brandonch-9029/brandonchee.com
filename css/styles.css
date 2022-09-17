@@ -1,0 +1,24 @@
+#head-container {
+    background-image: url("../images/herobanner.jpg");
+    height: 100vh;
+}
+
+#resume-title {
+    margin-top: 100px;
+}
+
+.resume-container {
+    margin-top: 100px;
+}
+
+.resume-item {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.center-block {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+ }
+ 
