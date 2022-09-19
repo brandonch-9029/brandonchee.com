@@ -16,9 +16,17 @@
     margin-bottom: 80px;
 }
 
+.resume-photo {
+    max-height: 170px;
+    max-width: 310px;
+}
+
 .center-block {
     margin-left:auto;
     margin-right:auto;
     display:block;
  }
  
+ h3 {
+    margin-top: 20px;
+ }
