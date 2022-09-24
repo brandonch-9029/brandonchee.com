@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Brandon Chee</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/styles.css">
     </head>
 
@@ -13,21 +14,37 @@
   <body>
 
     <div id="head-container-resume">
-      <div class="container">
-              <header class="p-3">
-                  <div class="navbar fixed-top">
-                    <div class="container justify-content-start">
-                      <div class="justify-content-center d-flex flex-wrap">
-                        <a href="file:///C:/Users/User/github%20projects/brandonchee.com/index.html" class="nav-link text-secondary px-3">01 : Home</a>
-                        <a href="file:///C:/Users/User/github%20projects/brandonchee.com/resume.html" class="nav-link text-secondary px-3">02 : Resume</a>
-                        <a href="https://www.linkedin.com/in/br4nd0nch33/" class="nav-link text-secondary px-3">03 : LinkedIn</a>
-                        <a href="https://github.com/brandonch-9029/" class="nav-link text-secondary px-3">04 : GitHub</a>
-                        <a href="https://untappd.com/user/9029" class="nav-link text-secondary px-3">05 : Untappd</a>
-                      </div> 
-                    </div>
-              </header>
         
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
 
+          <button class="navbar-toggler button-length ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav float-end">
+              <li class="nav-item">
+                <a class="nav-link mx-3" href="https://www.brandonchee.com/index">01 : Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-3" href="https://www.brandonchee.com/resume">02 : Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-3" href="https://www.linkedin.com/in/br4nd0nch33/">03 : LinkedIn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-3" href="https://github.com/brandonch-9029/">04 : GitHub</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-3" href="https://untappd.com/user/9029">05 : Untappd</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
         <div class="container-fluid resume-container">
             <div class="row resume-label">
                 <h2>Education</h2>
@@ -129,7 +146,7 @@
 
     <div id="end">
       <div class="container-fluid p-3">
-        <p class="text-center">
+        <p class="text-center robotomonofont">
           © Brandon Chee 2022
         </p>
       </div>

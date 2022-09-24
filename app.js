@@ -5,8 +5,8 @@ var options = {
       'a craft beer geek', 
       'an adventurous cook'
     ],
-    typeSpeed: 70,
-    backSpeed: 30,
+    typeSpeed: 65,
+    backSpeed: 25,
     loop: true
   };
   
