@@ -18,7 +18,11 @@
 }
 
 .resume-photo {
-    max-height: 170px;
+    max-width: 180px;
+}
+
+.resume-photo-long {
+    width: 100%;
     max-width: 310px;
 }
 
