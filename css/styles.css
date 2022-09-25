@@ -110,3 +110,12 @@ h3 {
 .heroshadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
+
+.error {
+    font-size: 30vh;
+    font-weight: bold;
+}
+
+.photo-caption {
+    margin-bottom: 30px;
+}

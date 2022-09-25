@@ -3,7 +3,7 @@ var options = {
       'Brandon Chee', 
       'an aspiring software engineer', 
       'a craft beer geek', 
-      'an adventurous cook'
+      'a rower, cook, and dog lover'
     ],
     typeSpeed: 65,
     backSpeed: 25,
