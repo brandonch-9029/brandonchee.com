@@ -33,18 +33,22 @@ async function findLyrics() {
             var newTitle = document.createElement('td') // Title Element
             var newArtist = document.createElement('td') // Artist Element
             var newAlbum = document.createElement('td') // Album Element
-            var newLink = document.createElement('a'); // Link Element
+            var newLink = document.createElement('td') // Link Element
+            var newHref = document.createElement('a'); // Actual Link
 
-            newIndex.innerHTML = i.toString();
-            newIndex.scope = "row"
+            currentIndex = i + 1 // Count from 1
+            newIndex.innerHTML = currentIndex.toString(); // Index to String
+            newIndex.scope = "row" // Bootstrap <tr> scope is row
 
-            newTitle.innerHTML = blobTitle;
+            newTitle.innerHTML = blobTitle; // Assign Metadata
             newArtist.innerHTML = blobArtist;
             newAlbum.innerHTML = blobAlbum;
 
-            newLink.href = blobUrl;
-            newLink.innerHTML = blobName;
-            newLink.target = "_blank";
+            newHref.href = blobUrl; // Include blob URL
+            newHref.innerHTML = "Link";
+            newHref.target = "_blank"; // Target blank to open in new tab
+            newLink.appendChild(newHref);
+            
 
             var newRow = document.createElement('tr'); // Create a new row <tr>
             
