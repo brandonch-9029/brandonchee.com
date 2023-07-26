@@ -1,7 +1,7 @@
 async function findLyrics() {
     // const response = await fetch("https://brandonlyrics.blob.core.windows.net/lyrics?comp=list");
 
-    await fetch('https://brandonlyrics.blob.core.windows.net/lyrics?comp=list')
+    await fetch('https://brandonlyrics.blob.core.windows.net/lyrics?restype=container&comp=list&include=metadata')
     .then(response => response.text())
     .then(xmlString => {
         // Parse the XML once you have the XML string
@@ -23,11 +23,13 @@ async function findLyrics() {
             var tableRow = document.createDocumentFragment(); // Create Table Row
             //const brk = document.createElement('br');
             const blob = allBlobs[i]; // Current Blob
-            blobName = blob.childNodes[0].childNodes[0].nodeValue;
-            blobUrl = blob.childNodes[1].childNodes[0].nodeValue;
-            blobTitle = "Placeholder Title";
-            blobArtist = "Placeholder Artist";
-            blobAlbum = "Placeholder Album";
+            blobFileName = blob.childNodes[0].childNodes[0].nodeValue; // File Name
+            blobUrl = blob.childNodes[1].childNodes[0].nodeValue; // File URL
+            blobName = blobFileName.slice(0, -5) // Remove .html to get song name
+            
+            blobTitle = blobName; // Song Name
+            blobArtist = blob.childNodes[3].getElementsByTagName('Artist')[0].innerHTML; // No idea why it is innerHTML here but the blobs are nodeValue
+            blobAlbum = blob.childNodes[3].getElementsByTagName('Album')[0].innerHTML;
 
             var newIndex = document.createElement('th') // Index Element
             var newTitle = document.createElement('td') // Title Element
@@ -75,3 +77,4 @@ async function findLyrics() {
         //console.log(exampleName);
     }
 }
+ 
