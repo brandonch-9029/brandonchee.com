@@ -31,6 +31,10 @@ async function findLyrics() {
             blobArtist = blob.childNodes[3].getElementsByTagName('Artist')[0].innerHTML; // No idea why it is innerHTML here but the blobs are nodeValue
             blobAlbum = blob.childNodes[3].getElementsByTagName('Album')[0].innerHTML;
 
+            // In case Artist/Album is in Japanese, we will perform URI decoding
+            blobArtistDecoded = decodeURI(blobArtist)
+            blobAlbumDecoded = decodeURI(blobAlbum)
+
             var newIndex = document.createElement('th') // Index Element
             var newTitle = document.createElement('td') // Title Element
             var newArtist = document.createElement('td') // Artist Element
@@ -43,8 +47,8 @@ async function findLyrics() {
             newIndex.scope = "row" // Bootstrap <tr> scope is row
 
             newTitle.innerHTML = blobTitle; // Assign Metadata
-            newArtist.innerHTML = blobArtist;
-            newAlbum.innerHTML = blobAlbum;
+            newArtist.innerHTML = blobArtistDecoded; // Decoded
+            newAlbum.innerHTML = blobAlbumDecoded; // Decoded
 
             newHref.href = blobUrl; // Include blob URL
             newHref.innerHTML = "Link";
