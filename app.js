@@ -1,9 +1,9 @@
 var options = {
     strings: [
       'Brandon Chee', 
-      'an aspiring software engineer', 
+      'a cloud engineer', 
       'a craft beer geek', 
-      'a rower, cook, and dog lover'
+      'an aspiring harpist'
     ],
     typeSpeed: 65,
     backSpeed: 25,
